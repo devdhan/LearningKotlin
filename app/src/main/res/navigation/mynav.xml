@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mynav"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.example.day_1.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.day_1.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_choseFragment"
+            app:destination="@id/choseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.day_1.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up">
+        <action
+            android:id="@+id/action_signUpFragment_to_apiFragment3"
+            app:destination="@id/apiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/choseFragment"
+        android:name="com.example.day_1.ChoseFragment"
+        android:label="fragment_chose"
+        tools:layout="@layout/fragment_chose">
+    </fragment>
+    <fragment
+        android:id="@+id/apiFragment"
+        android:name="com.example.day_1.ApiFragment"
+        android:label="fragment_api"
+        tools:layout="@layout/fragment_api">
+        <action
+            android:id="@+id/action_apiFragment_to_recyclerFragment"
+            app:destination="@id/recyclerFragment" />
+        <action
+            android:id="@+id/action_apiFragment_to_imageFragment"
+            app:destination="@id/imageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageFragment"
+        android:name="com.example.day_1.ImageFragment"
+        android:label="fragment_image"
+        tools:layout="@layout/fragment_image" />
+    <fragment
+        android:id="@+id/recyclerFragment"
+        android:name="com.example.day_1.RecyclerFragment"
+        android:label="fragment_recycler"
+        tools:layout="@layout/fragment_recycler" />
+    <dialog
+        android:id="@+id/recyclerBottomShiftFragment"
+        android:name="com.example.day_1.RecyclerBottomShiftFragment"
+        android:label="fragment_recycler_bottom_shift"
+        tools:layout="@layout/fragment_recycler_bottom_shift" />
+</navigation>
